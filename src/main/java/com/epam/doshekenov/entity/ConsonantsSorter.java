@@ -1,12 +1,10 @@
 package com.epam.doshekenov.entity;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.*;
 
 public class ConsonantsSorter {
 
-    ArrayList<Word> words;
+    List<Word> words;
 
     public ConsonantsSorter(String fileName) {
         words = new ArrayList<>();
@@ -26,10 +24,25 @@ public class ConsonantsSorter {
 
     public void print() {
         for (Word word : words) {
-            System.out.print(word.getValue()+",  ");
+            System.out.print(word.getValue() + ",  ");
         }
         System.out.println("\n");
     }
 
+    public void bubbleSort() {
+        Word[] wordArray = words.toArray(new Word[words.size()]);
+        for (int i = 0; i < wordArray.length; i++) {
+            for (int j = i; j < wordArray.length; j++) {
+                if (wordArray[i].getConsonantsNum() > wordArray[j].getConsonantsNum()) {
+                    Word temp;
+                    temp = wordArray[i];
+                    wordArray[i] = wordArray[j];
+                    wordArray[j] = temp;
+                }
+            }
+        }
+        words.clear();
+        words = Arrays.asList(wordArray);
+    }
 
 }

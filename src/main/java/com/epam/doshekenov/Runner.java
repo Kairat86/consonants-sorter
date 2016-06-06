@@ -8,7 +8,7 @@ public class Runner {
 
         ConsonantsSorter vowelsSorter=new ConsonantsSorter("strings.txt");
         vowelsSorter.print();
-        vowelsSorter.sort();
+        vowelsSorter.bubbleSort();
         vowelsSorter.print();
     }
 }
