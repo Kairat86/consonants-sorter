@@ -3,7 +3,7 @@ package com.epam.doshekenov.entity;
 
 public class Word implements Comparable<Word> {
 
-    String value;
+    private String value;
 
     public Word(String value) {
         this.value = value;
@@ -36,6 +36,9 @@ public class Word implements Comparable<Word> {
             case 'U':
                 return false;
             case 'Y':
+                if (value.charAt(0) == 'Y') {
+                    return true;
+                }
                 return false;
             default:
                 return true;

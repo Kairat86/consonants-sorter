@@ -44,3 +44,6 @@ reflection
 polymorphism
 encapsulation
 dot
+oop
+yoga
+yoda
