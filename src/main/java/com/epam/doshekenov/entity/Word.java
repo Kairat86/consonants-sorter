@@ -16,14 +16,14 @@ public class Word implements Comparable<Word> {
     public int getConsonantsNum() {
         int count = 0;
         for (char ch : value.toCharArray()) {
-            if (check(ch)) {
+            if (isConsonant(ch)) {
                 count++;
             }
         }
         return count;
     }
 
-    private boolean check(char ch) {
+    private boolean isConsonant(char ch) {
         switch (Character.toUpperCase(ch)) {
             case 'A':
                 return false;

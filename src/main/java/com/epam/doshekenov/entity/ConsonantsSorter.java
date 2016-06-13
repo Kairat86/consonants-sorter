@@ -9,12 +9,6 @@ public class ConsonantsSorter {
         return words;
     }
 
-    public static void print(List<Word> words) {
-        for (Word word : words) {
-            System.out.print(word.getValue() + ",  ");
-        }
-        System.out.println("\n");
-    }
 
     public static List<Word> bubbleSort(List<Word> words) {
         for (int i = 0; i < words.size(); i++) {
